@@ -1,0 +1,82 @@
+.animation-block {
+  font-size: 24px;
+
+  &__display {
+    color: #949da5;
+    padding: 40px;
+    background: #182c3d;
+    width: 600px;
+    max-width: 100%;
+    display: none;
+  }
+
+  &__btn-one {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #949da5;
+    padding: 0 20px;
+    line-height: 55px;
+    background: #182c3d;
+
+    &:hover {
+      color: #182c3d;
+      background: #949da5;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    visibility: hidden;
+    bottom: 9999px;
+
+    &:checked ~ .animation-block__display {
+      animation-duration: 1.5s;
+      animation-name: anim;
+      animation-fill-mode: forwards;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      display: block;
+      @keyframes anim {
+        from {
+          transform: translateX(-50%) translateY(-50%) scale(0.5);
+        }
+        to {
+          transform: translateX(-50%) translateY(-70%) scale(1);
+        }
+      }
+    }
+  }
+
+  &__btn-two {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 0 4px;
+    color: #949da5;
+    font-size: 13px;
+    border: 1px solid #949da5;
+    cursor: pointer;
+    line-height: 20px;
+
+    &:hover {
+      color: #182c3d;
+      background: #949da5;
+    }
+
+    &:after {
+      content: "X";
+    }
+  }
+
+  &__p {
+  }
+
+  &__p-second {
+    text-align: center;
+    margin-top: 20px;
+  }
+}

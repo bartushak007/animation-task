@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.animation-block {
+  font-size: 24px;
+}
+
+.animation-block__display {
+  color: #949da5;
+  padding: 40px;
+  background: #182c3d;
+  width: 600px;
+  max-width: 100%;
+  display: none;
+}
+
+.animation-block__btn-one {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #949da5;
+  padding: 0 20px;
+  line-height: 55px;
+  background: #182c3d;
+}
+
+.animation-block__btn-one:hover {
+  color: #182c3d;
+  background: #949da5;
+}
+
+.animation-block__checkbox {
+  position: absolute;
+  visibility: hidden;
+  bottom: 9999px;
+}
+
+.animation-block__checkbox:checked ~ .animation-block__display {
+  animation-duration: 1.5s;
+  animation-name: anim;
+  animation-fill-mode: forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+}
+
+@keyframes anim {
+  from {
+    transform: translateX(-50%) translateY(-50%) scale(0.5);
+  }
+  to {
+    transform: translateX(-50%) translateY(-70%) scale(1);
+  }
+}
+
+.animation-block__btn-two {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 0 4px;
+  color: #949da5;
+  font-size: 13px;
+  border: 1px solid #949da5;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.animation-block__btn-two:hover {
+  color: #182c3d;
+  background: #949da5;
+}
+
+.animation-block__btn-two:after {
+  content: "X";
+}
+
+.animation-block__p-second {
+  text-align: center;
+  margin-top: 20px;
+}
