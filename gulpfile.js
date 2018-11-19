@@ -25,6 +25,6 @@ gulp.task("browser", function() {
 });
 
 gulp.task("build", function() {
-	var buildCss = gulp.src(["app/css/*.css"]).pipe(gulp.dest("build/css"));
+	var buildCss = gulp.src(["app/css/main.css"]).pipe(gulp.dest("build/css"));
 	var buildHtml = gulp.src("app/*.html").pipe(gulp.dest("build"));
 });

@@ -1,11 +1,11 @@
 .animation-block {
-  font-size: 24px;
+  font-size: $font-size;
 
   &__display {
-    color: #949da5;
+    color: $other-color;
     padding: 40px;
-    background: #182c3d;
-    width: 600px;
+    background: $dark-blue;
+    width: $all-width;
     max-width: 100%;
     display: none;
   }
@@ -15,14 +15,14 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    color: #949da5;
+    color: $other-color;
     padding: 0 20px;
     line-height: 55px;
-    background: #182c3d;
+    background: $dark-blue;
 
     &:hover {
-      color: #182c3d;
-      background: #949da5;
+      color: $dark-blue;
+      background: $other-color;
     }
   }
 
@@ -32,7 +32,7 @@
     bottom: 9999px;
 
     &:checked ~ .animation-block__display {
-      animation-duration: 1.5s;
+      animation-duration: $duration;
       animation-name: anim;
       animation-fill-mode: forwards;
       position: absolute;
@@ -40,10 +40,12 @@
       left: 50%;
       transform: translate(-50%);
       display: block;
+
       @keyframes anim {
         from {
           transform: translateX(-50%) translateY(-50%) scale(0.5);
         }
+
         to {
           transform: translateX(-50%) translateY(-70%) scale(1);
         }
@@ -56,23 +58,20 @@
     right: 10px;
     top: 10px;
     padding: 0 4px;
-    color: #949da5;
+    color: $other-color;
     font-size: 13px;
-    border: 1px solid #949da5;
+    border: 1px solid $other-color;
     cursor: pointer;
     line-height: 20px;
 
     &:hover {
-      color: #182c3d;
-      background: #949da5;
+      color: $dark-blue;
+      background: $other-color;
     }
 
     &:after {
       content: "X";
     }
-  }
-
-  &__p {
   }
 
   &__p-second {
