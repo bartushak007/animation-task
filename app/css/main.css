@@ -26,6 +26,8 @@
   padding: 0 20px;
   line-height: 55px;
   background: #182c3d;
+  cursor: pointer;
+  transition: 1s;
 }
 
 .animation-block__btn-one:hover {
@@ -55,7 +57,7 @@
     transform: translateX(-50%) translateY(-50%) scale(0.5);
   }
   to {
-    transform: translateX(-50%) translateY(-70%) scale(1);
+    transform: translateX(-50%) translateY(-30%) scale(1);
   }
 }
 
@@ -69,6 +71,7 @@
   border: 1px solid #949da5;
   cursor: pointer;
   line-height: 20px;
+  transition: 1s;
 }
 
 .animation-block__btn-two:hover {

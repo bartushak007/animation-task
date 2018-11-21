@@ -19,6 +19,8 @@
     padding: 0 20px;
     line-height: 55px;
     background: $dark-blue;
+    cursor: pointer;
+    transition: 1s;
 
     &:hover {
       color: $dark-blue;
@@ -47,7 +49,7 @@
         }
 
         to {
-          transform: translateX(-50%) translateY(-70%) scale(1);
+          transform: translateX(-50%) translateY(-30%) scale(1);
         }
       }
     }
@@ -63,6 +65,7 @@
     border: 1px solid $other-color;
     cursor: pointer;
     line-height: 20px;
+    transition: 1s;
 
     &:hover {
       color: $dark-blue;
